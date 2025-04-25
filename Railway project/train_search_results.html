@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Search Results | Railway management system</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-blue-900 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-train text-2xl"></i>
+                <h1 class="text-2xl font-bold">Railway management system</h1>
+            </div>
+            <div class="space-x-4">
+                <a href="index.html" class="hover:text-blue-200">Home</a>
+                <a href="login.html" class="hover:text-blue-200">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Results Section -->
+    <div class="container mx-auto p-4 md:p-8">
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4">Search Results</h2>
+            
+            <!-- Search Summary -->
+            <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <p class="text-gray-600">From</p>
+                        <p class="font-semibold" id="fromStationDisplay">Delhi (DEL)</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-600">To</p>
+                        <p class="font-semibold" id="toStationDisplay">Mumbai (MUM)</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-600">Date</p>
+                        <p class="font-semibold" id="journeyDateDisplay">15 Oct 2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trains List -->
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white rounded-lg overflow-hidden">
+                    <thead class="bg-blue-900 text-white">
+                        <tr>
+                            <th class="py-3 px-4 text-left">Train No.</th>
+                            <th class="py-3 px-4 text-left">Train Name</th>
+                            <th class="py-3 px-4 text-left">Departure</th>
+                            <th class="py-3 px-4 text-left">Arrival</th>
+                            <th class="py-3 px-4 text-left">Duration</th>
+                            <th class="py-3 px-4 text-left">Classes</th>
+                            <th class="py-3 px-4 text-left">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="trainsList" class="divide-y divide-gray-200">
+                        <!-- Train data will be populated here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="train_search_results.js"></script>
+</body>
+</html>
